@@ -36,13 +36,13 @@ func CalcNPrint(mtext []string) {
 		b := false
 		num := [2]int{0, 0}
 		for i, i2 := range RomeNumbers {
-			if strings.Contains(mtext[0], i2) {
+			if strings.Contains(mtext[0], i2) && len(i2) == len(mtext[0]) {
 				a = true
-				num[0] = i
+				num[0] = i + 1
 			}
-			if strings.Contains(mtext[2], i2) {
+			if strings.Contains(mtext[2], i2) && len(i2) == len(mtext[2]) {
 				b = true
-				num[1] = i
+				num[1] = i + 1
 			}
 		}
 		if a == b {
